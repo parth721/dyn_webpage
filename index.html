@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saveProfile(){
+            let newName = document.getElementById('input-name').value;
+            document.getElementById('name').textContent = newName;
+            
+        }
+    </script>
+</head>
+
+<body>
+    <span class="container">
+        <h1 id="header"> Profile </h1>
+        <h3> Welcome👋 <h3 id="name"> developer </h3></h3>
+        <div>
+        your Name : <input type="text" id="input-name" />
+        <button class="button" onclick="saveProfile()"> Save </button>
+      </div>
+   </span>
+</body>
+</html>
