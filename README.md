@@ -4,15 +4,15 @@ while watching [docker tutorial](https://youtu.be/3c-iBn73dDE?t=4004) trying to 
   - [x] established the connection  with the help of ejs(template engine), mongoose(ODM), atlas, express, HTTP forms.
   
   How ?<br>
-  - [x] setup
+  - [ ] setup
   - [x] config ejs<br>
   ```
   app.set('view engine', 'ejs');                    // views dir. for ejs-files
 app.use(express.urlencoded({ extended: true }));  // add middleware
 app.use(express.static('public'));                // look public dir. for static files
 ```
-  - [x] connect to mongoDB-Atlas
-  - [x] define schema & model
+  - [ ] connect to mongoDB-Atlas
+  - [ ] define schema & model
   - [x] start server
   ```
   app.listen(...)
