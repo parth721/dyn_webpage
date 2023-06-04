@@ -1,15 +1,20 @@
-# Connecting HTML-file with nodejs-file which is connected to mongoDB docker-container to build a dynamic webpage.
+# Connecting EJS-file with Expessjs-file which is connected to mongoDB docker-container to build a dynamic webpage.
 while watching [docker tutorial](https://youtu.be/3c-iBn73dDE?t=4004) trying to make project. It seems like I am unable to establish connection in between them.
 
-  - [x] established the connection  with the help of ejs(template engine), mongoose(ODM), atlas, express.
+  - [x] established the connection  with the help of ejs(template engine), mongoose(ODM), atlas, express, HTTP forms.
   
   How ?<br>
   - [x] config ejs<br>
+  ```
+  app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+```
   - [x] connect to mongoDB-Atlas
   - [x] define schema & model
   - [x] start server
   ```
-  app.listen()
+  app.listen(...)
   ```
   - [x] get request
     
@@ -45,5 +50,5 @@ app.get ("/", async(req, res) => {
 });
 
   ```
-  Explanation : <br> a post request is made.  which contains a callback function in which  we try to store the value form newName(ejs) to newName(const).  <br>The {} argument in findOneAndUpdate() finds the first document that matches any criteria, allowing us to update the existing name. The { upsert: true, new: true } options indicate that if no document is found, a new document should be created (upsert: true), and the updated document should be returned (new: true).
+  Explanation : <br> when the form submits a post request is triggered (see index.ejs).  which contains a callback function in which  we try to store the value form newName(ejs) to newName(const).  <br>The {} argument in findOneAndUpdate() finds the first document that matches any criteria, allowing us to update the existing name. The { upsert: true, new: true } options indicate that if no document is found, a new document should be created (upsert: true), and the updated document should be returned (new: true).
 <br>After the update is complete, the client is redirected back to the root route '/', triggering a GET request to display the updated name on the webpage.
