@@ -4,6 +4,7 @@ while watching [docker tutorial](https://youtu.be/3c-iBn73dDE?t=4004) trying to 
   - [x] established the connection  with the help of ejs(template engine), mongoose(ODM), atlas, express, HTTP forms.
   
   How ?<br>
+  - [x] setup
   - [x] config ejs<br>
   ```
   app.set('view engine', 'ejs');                    // views dir. for ejs-files
