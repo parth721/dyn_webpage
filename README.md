@@ -6,9 +6,9 @@ while watching [docker tutorial](https://youtu.be/3c-iBn73dDE?t=4004) trying to 
   How ?<br>
   - [x] config ejs<br>
   ```
-  app.set('view engine', 'ejs');
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+  app.set('view engine', 'ejs');                    // views dir. for ejs-files
+app.use(express.urlencoded({ extended: true }));  // add middleware
+app.use(express.static('public'));                // look public dir. for static files
 ```
   - [x] connect to mongoDB-Atlas
   - [x] define schema & model
