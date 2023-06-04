@@ -28,7 +28,7 @@ app.get ("/", async(req, res) => {
 
    Explaination : <br> a get request is made.  which contains a callback function in which we try to find the first document which fulfill the  __query-criteria__  in this case there are no constraints. so it return the first document & assign it to name constant. <br>if name is ****truthy**** in the previous step, assign that value to name variable (__ejs__) from name (__constant__) connected to name field in the document (__names collection__). if name not found assign the "default_name" to name variable (__ejs__).
    
-  - [x] post request
+  - [x] post request to update data
   
   ```
   app.post('/', async (req, res) => {
