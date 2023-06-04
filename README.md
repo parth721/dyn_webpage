@@ -8,6 +8,9 @@ while watching [docker tutorial](https://youtu.be/3c-iBn73dDE?t=4004) trying to 
   - [x] connect to mongoDB-Atlas
   - [x] define schema & model
   - [x] start server
+  ```
+  app.listen()
+  ```
   - [x] get request
     
 ```
@@ -21,6 +24,8 @@ app.get ("/", async(req, res) => {
                        }
                    });
 ```
+<img width="323" alt="image" src="https://github.com/parth721/beginner/assets/112557191/36c2f946-0a04-4cba-99d8-2bb827ca344a">
+
    Explaination : <br> a get request is made.  which contains a callback function in which we try to find the first document which fulfill the  __query-criteria__  in this case there are no constraints. so it return the first document & assign it to name constant. <br>if name is ****truthy**** in the previous step, assign that value to name variable (__ejs__) from name (__constant__) connected to name field in the document (__names collection__). if name not found assign the "default_name" to name variable (__ejs__).
    
   - [x] post request
@@ -40,5 +45,5 @@ app.get ("/", async(req, res) => {
 });
 
   ```
-  Explanation : <br> a post request is made.  which contains a callback function in which  we try to store the value form newName(ejs) to newName(const). Then await Name.findOneAndUpdate({}, { name: newName }, { upsert: true, new: true }) queries the database to find the existing name and update it with the new name. <br>The {} argument in findOneAndUpdate() finds the first document that matches any criteria, allowing us to update the existing name. The { upsert: true, new: true } options indicate that if no document is found, a new document should be created (upsert: true), and the updated document should be returned (new: true).
+  Explanation : <br> a post request is made.  which contains a callback function in which  we try to store the value form newName(ejs) to newName(const).  <br>The {} argument in findOneAndUpdate() finds the first document that matches any criteria, allowing us to update the existing name. The { upsert: true, new: true } options indicate that if no document is found, a new document should be created (upsert: true), and the updated document should be returned (new: true).
 <br>After the update is complete, the client is redirected back to the root route '/', triggering a GET request to display the updated name on the webpage.
